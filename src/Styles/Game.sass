@@ -1,0 +1,66 @@
+$primaryBtn: rgb(255, 165, 0)
+
+.gamesPage
+    background-color: #222222 
+    height: 200%
+    
+.gameContainer
+    display: grid
+    justify-content: center
+    
+.score
+    display: flex
+    justify-content: center
+
+.cart
+    width: 10px
+    height: 10px
+    background-color: blue
+
+.cart:hover
+    cursor: pointer
+
+.squaresContainer
+    height: 600px
+    width: 600px
+    background-color: #222222
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    gap: 1em
+
+.card
+    background-color: #ADD8E6 //FFA500
+    border-radius: 5%
+    display: flex
+    justify-content: center //moves it horizontally
+    align-items: center //moves it vertically
+    transition: transform 0.2s
+    filter: brightness(1)
+    
+.card:hover
+    transform: scale(1.1)
+    cursor: pointer
+
+.startBtn
+    background-color: $primaryBtn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 10%
+    height: 5%
+    z-index: 9999
+    transition: transform 0.2s
+
+.startBtn:hover
+    cursor: pointer
+    filter: brightness(1.2)
+
+.gameOver
+    height: 30%
+    width: 30%
+    background-color: black
+    border-radius: 5%
+    display: grid
+

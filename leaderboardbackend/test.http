@@ -1,0 +1,12 @@
+
+POST http://localhost:4000/app/Game
+Content-Type: application/json
+
+{
+    "fullName": "Hernaldo",
+    
+    "score": "-90000"
+}
+
+//GET http://localhost:4000/app/Leaderboard
+//Content-Type: application/json
