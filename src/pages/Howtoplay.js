@@ -1,4 +1,13 @@
+import '../Styles/HowToPlay.sass'
+
 function Howtoplay(){
-    return <h1> This is how you play page</h1>
+    return (
+        <div classname='howToPlayPage'>
+
+            <p classname='title'>How To Play </p>
+
+        </div>
+       
+    )
 }
 export default Howtoplay
