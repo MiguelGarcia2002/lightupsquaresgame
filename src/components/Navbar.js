@@ -14,7 +14,7 @@ function Navbar(){
         setActiveLink(window.location.pathname);
       }, []);
 
-//className={activeLink === }
+
 
     return <nav className = 'nav'> 
         <ul>

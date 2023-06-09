@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import '../Styles/gameOverForm.sass'
 
 
 class Gameoverform extends Component {
@@ -19,8 +20,6 @@ class Gameoverform extends Component {
             fullName: event.target.value
         })
     }
-
-    
 
 
     onSubmit(event){
@@ -49,20 +48,26 @@ class Gameoverform extends Component {
         return (
             <div className='gameOverForm'> 
                 <form onSubmit={this.onSubmit}>
-                    <h1> Game over</h1>
-                        <p> Enter your name please: </p>
+                    
+                    <div className='gameOverGrid'>
+                        <h1 className='gameOverText'> Game over</h1>
+                        
+                        <p className='scoreText'> Score: {this.props.score} </p>
 
-                    <input type='text' 
-                    placeholder='Name'
-                    onChange={this.changeFullname}
-                    value = {this.state.fullName}
-                    />
+                        <p className='lineText'> Enter your name here: </p>
 
-                    <p> Score: {this.props.score} </p>
-
-                      <a href='/Leaderboard'>
-                        <input type='submit' className='leaderBoardButton' value='Submit'/> 
-                      </a>  
+                        <input type='text' 
+                        placeholder='Name'
+                        onChange={this.changeFullname}
+                        value = {this.state.fullName}
+                        className='typeText'
+                        />
+                        <div className="leaderBoardButtonContainer">
+                            <input type='submit' className='leaderBoardButton' value='Submit'/> 
+                        </div>
+                       
+                    </div>
+                    
                     
                 </form>
             </div>

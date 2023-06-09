@@ -1,0 +1,63 @@
+
+.gameOverGrid
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr 20% 1fr 
+    background-color: #585f78
+    border-radius: 5%
+    
+
+.gameOverText
+    display: flex
+    color: 'white'
+    font-size: 40px
+    align-items: center
+    justify-content: center
+
+
+.leaderBoardButton
+    display: flex
+    width: 30%
+    justify-content: center
+    background: #B8203D
+    color: white
+    text-decoration: none
+    transition: transform 0.2s
+    filter: brightness(1)
+    
+.scoreText
+    display: flex
+    font-size: 30px
+    margin-top: 0
+    align-items: center
+    justify-content: center
+
+.lineText
+    margin-top: 0
+    margin-left: 9%   
+    font-size: 30px
+    margin-bottom: 0
+
+.typeText
+    margin-left: 9%
+    width: 80%
+    height: 40%
+    margin-top: 0
+    font-size: 25px
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06)
+    
+.leaderBoardButtonContainer
+    display: flex
+    justify-content: center
+   
+
+.leaderBoardButton
+    height: 30%
+    width: 80%
+    height: 30%
+    
+    //For w/e reason flex doesn't work?
+
+.leaderBoardButton:hover
+    transform: scale(1.1)
+    cursor: pointer
