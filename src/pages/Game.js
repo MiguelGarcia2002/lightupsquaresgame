@@ -84,6 +84,7 @@ function Game(){
                     }, 250)
                 }
                 else{
+                    //If it's not the last card keep incrementing setPlayingIndx so that playingIndx keeps going
                     setPlayingIndx(playingIndx +1)
                 }
             }
