@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/HowToPlay.sass'
+import '../Styles/htpRectangles.sass'
 
 //Declaration of props
 export const HtpRectangle = ({

@@ -22,8 +22,17 @@ function Howtoplay(){
     }
 
     const firstBlock ={
-        title1: "Start of the game",
-        text: "Palkia is a Water/Dragon-type Legendary Pokémon introduced in Generation IV. Palkia is the Version Mascot for Pokémon Pearl. It is Dialga's rival and is a member of the Creation Trio, alongside Dialga and Giratina."
+        title: "Start of the game",
+        text: "The game starts with a 3x3 grid consisiting of light blue squares, the game starts with one square lighting up and you have to click on that square. This starts the pattern and its up to you to remember the pattern to continue the game."
+    }
+
+    const secondBlock = {
+        title: "Clicking the right square",
+        text: "Each square has its own hover effect to show where you're going to click, if you remembered correctly the correct square would light up to a white color and back to normal. Clicking on the correct square results in the square turning grayish blue and back to its original color. Click the square to try it!"
+    }
+    const thirdBlock = {
+        title: "Whoops, hit the wrong block...",
+        text: "The game eventually has to end and either you were too distracted to focus on the pattern of the squares... or you genuinely forgot. Regardless the incorrect square will flahs red to indicate the gmae is over. After that you find out if you made it on the leaderboard ot not! Click on the square to try it! "
     }
     
 
@@ -36,22 +45,27 @@ function Howtoplay(){
             <div className='colorCard'> </div>
 
             <div className='backgroundContainer'>
-                
-                <div className='square1'></div>
-                <div className='square2'></div>
-                <div className='square3'></div>
 
+            <div className='rectangleContainer'>
                 <HtpRectangle
-                    title = {firstBlock["title1"]}
+                    title = {firstBlock["title"]}
                     text = {firstBlock["text"]}
                     square = {<div className='square2' onClick={showregClick}></div> }
                 ></HtpRectangle>
 
                 <HtpRectangle
-                    title = {firstBlock["title1"]}
-                    text = {firstBlock["text"]}
+                    title = {secondBlock["title"]}
+                    text = {secondBlock["text"]}
+                    square = {<div className='square2' onClick={showregClick}></div> }
+                ></HtpRectangle>
+
+                <HtpRectangle
+                    title = {thirdBlock["title"]}
+                    text = {thirdBlock["text"]}
                     square = {<div className='square3' onClick={turnRed}></div> }
                 ></HtpRectangle>
+            </div>
+                
                 
             </div>
 
