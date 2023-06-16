@@ -66,8 +66,7 @@ function Game(){
         if(playing){
             //e.target.style.opacity = 0.8
             e.target.style.backgroundColor = '#8693AB'
-            
-            
+
             setTimeout(() => {
                 e.target.style.backgroundColor = '#ADD8E6'
                 e.target.style.opacity = 1;

@@ -1,7 +1,21 @@
 import '../Styles/HowToPlay.sass'
+import Gamebutton from '../components/Gamebutton';
+import react, {useState} from 'react'
 import {HtpRectangle} from '../components/htpRectangle.js'
 
 function Howtoplay(){
+
+    const [squares, setSquares] = useState([
+        {id:1, stat:''},
+        {id:2, stat:''},
+        {id:3, stat:''},
+        {id:4, stat:''},
+        {id:5, stat:''},
+        {id:6, stat:''},
+        {id:7, stat:''},
+        {id:8, stat:''},
+        {id:9, stat:''},
+    ])
 
     const turnRed = (e) =>{
         //trurns red for 600 milliseconds
@@ -11,6 +25,7 @@ function Howtoplay(){
             e.target.style.backgroundColor = '#ADD8E6'
         }, 600)
     }
+
 
     const showregClick = (e) =>{
         //turns greyish blue for 600 milliseconds
@@ -50,7 +65,12 @@ function Howtoplay(){
                 <HtpRectangle
                     title = {firstBlock["title"]}
                     text = {firstBlock["text"]}
-                    square = {<div className='square2' onClick={showregClick}></div> }
+                    square = {
+                    <div className='square1'>
+                        {squares.map ((square, index ) =>(
+                        <div className='miniSquares'> </div>
+                        ))}
+                    </div> }
                 ></HtpRectangle>
 
                 <HtpRectangle
@@ -64,6 +84,13 @@ function Howtoplay(){
                     text = {thirdBlock["text"]}
                     square = {<div className='square3' onClick={turnRed}></div> }
                 ></HtpRectangle>
+
+                <div className='square1'>  
+                    {squares.map ((square, index ) =>(
+                        <div className='miniSquares'> </div>
+                    ))}
+                </div>
+
             </div>
                 
                 

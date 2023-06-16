@@ -10,16 +10,22 @@
 
 .backgroundContainer
     display: flex
-    background-color: #212227
+    background-color: #3b4c7a
     padding: 2%
     
 
 
 .square1
+    display: flex 
+    display: grid
     height: 15vw
     width: 15vw
-    background-color: #ADD8E6 
-    border-radius: 5%
+    padding-left: 0.6%
+    padding-top: 0.5%
+    background-color: #212227
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows:  repeat(3, 1fr)
+    gap: 1em
 
 .square2
     height: 15vw
@@ -46,5 +52,6 @@
     grid-template-rows: 1fr 1fr 1fr
     grid-gap: 50px
     justify-items: center
+    
     
 
