@@ -15,31 +15,46 @@ function Leaderboard(){
         console.error(error);
       });
     }, []);
+
+
     
 // Testign something out wiht this: <p>{players[1].fullName} </p>
     return (
-        <div>
-        <h1>This is the leaderboard page</h1>
-        
-        <ul>
-          {players.map((player) => (
-            <li key={player._id}>{player.fullName} - {player.score}</li>
-          ))}
-        </ul>
+        <div className='leaderBoardPage'>
+          <h1 className='title' >Leaderboard</h1>
 
-        <div className='leaderBoardContainer'>
-
-          <div className='gri-row-wrapper1'> 
-            <p className='topRowItem'> Rnaking</p>
-            <p className='topRowItem'> Name</p>
-            <p className='topRowItem'> score</p>
+          <div className='leadeBoardHolder'> 
+            <div className='leaderBoard'>
+              <p className='topRowItem'> Ranking</p>
+              <p className='topRowItem'> Name</p>
+              <p className='topRowItem'> score</p>
+                
+              {players.slice(0, 10).map((player, index) => (
+                //React.Fragment is a baller af element that lets you group other elements without an extra "node" (like a div)
+              <React.Fragment key={player._id}>
+                <p>{index + 1}</p>
+                <p>{player.fullName}</p>
+                <p>{player.score}</p>
+              </React.Fragment>
+              ))}
+            </div>
           </div>
-            
-        </div>
+
+
+          
 
 
       </div>
     )
 }
+
+/**
+ * I would do this if I wanted to display all the players 
+ * <ul>
+          {players.map((player) => (
+            <li key={player._id}>{player.fullName} - {player.score}</li>
+          ))}
+        </ul>
+ */
 
 export default Leaderboard

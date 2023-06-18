@@ -1,5 +1,4 @@
 import '../Styles/HowToPlay.sass'
-import Gamebutton from '../components/Gamebutton';
 import react, {useState} from 'react'
 import {HtpRectangle} from '../components/htpRectangle.js'
 
@@ -54,54 +53,48 @@ function Howtoplay(){
     return (
         <div className='howToPlayPage'>
 
-            <h1 className='title'>How To Play </h1>
-            <div className='redCard'> </div>
+        <h1 className='title'>How To Play </h1>
+        <div className='redCard'> </div>
             
-            <div className='colorCard'> </div>
+        <div className='colorCard'> </div>
 
             <div className='backgroundContainer'>
 
-            <div className='rectangleContainer'>
-                <HtpRectangle
-                    title = {firstBlock["title"]}
-                    text = {firstBlock["text"]}
-                    square = {
-                    <div className='square1'>
-                        {squares.map ((square, index ) =>(
-                        <div className='miniSquares'> </div>
-                        ))}
-                    </div> }
-                ></HtpRectangle>
+                <div className='rectangleContainer'>
+                    <HtpRectangle
+                        title = {firstBlock["title"]}
+                        text = {firstBlock["text"]}
+                        square = {
+                        <div className='square1'>
+                            {squares.map ((square, index ) =>(
+                            <div className='miniSquares'> </div>
+                            ))}
+                        </div> }
+                    ></HtpRectangle>
 
-                <HtpRectangle
-                    title = {secondBlock["title"]}
-                    text = {secondBlock["text"]}
-                    square = {<div className='square2' onClick={showregClick}></div> }
-                ></HtpRectangle>
+                    <HtpRectangle
+                        title = {secondBlock["title"]}
+                        text = {secondBlock["text"]}
+                        square = {<div className='square2' onClick={showregClick}></div> }
+                    ></HtpRectangle>
 
-                <HtpRectangle
-                    title = {thirdBlock["title"]}
-                    text = {thirdBlock["text"]}
-                    square = {<div className='square3' onClick={turnRed}></div> }
-                ></HtpRectangle>
-
-                <div className='square1'>  
+                    <HtpRectangle
+                        title = {thirdBlock["title"]}
+                        text = {thirdBlock["text"]}
+                        square = {<div className='square3' onClick={turnRed}></div> }
+                    ></HtpRectangle>
+                </div>       
+            </div>
+            
+        </div>
+     /* This is how I made that small square with the 3x3 grid
+    <div className='square1'>  
                     {squares.map ((square, index ) =>(
                         <div className='miniSquares'> </div>
                     ))}
                 </div>
-
-            </div>
-                
-                
-            </div>
-
-            
-            
-
-            
-        </div>
-       
+    **/  
     )
+    
 }
 export default Howtoplay

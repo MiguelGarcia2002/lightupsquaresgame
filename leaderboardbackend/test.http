@@ -3,9 +3,9 @@ POST http://localhost:4000/app/Game
 Content-Type: application/json
 
 {
-    "fullName": "Vegeta",
+    "fullName": "Sakashima",
     
-    "score": "9001"
+    "score": "0"
 }
 
 //GET http://localhost:4000/app/Leaderboard
